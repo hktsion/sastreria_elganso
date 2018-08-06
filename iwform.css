@@ -1,0 +1,21 @@
+/*POPUP*/
+#iwform #header { border:1px solid #CCCCCC; margin-top: 10px; margin-bottom:10px; padding-top: 15px; padding-bottom: 15px; }
+#iwform  #header h1 { text-align:center; }
+#iwform  #content { min-height: 100px; border:1px solid #CCCCCC; margin-top: 10px; margin-bottom:10px; padding: 15px; }
+#iwform { left: 0; position: absolute; top: 0; width: 100%; z-index: 1001; }
+#iwform .content-iwform { position: fixed; left: 25%; top: 20%; padding: 20px; box-sizing: border-box; width: 50%; min-height: 250px; border-radius: 15px; background-color: #FFFFFF; box-shadow: 5px 5px 7px #666666;}
+#iwform .content-iwform h2 {color:#48484B; margin-top: 0;padding-bottom: 4px; border-width: 50%; }
+#iwform .iwform-overlay {left: 0;position: absolute;top: 0;width: 100%;z-index: 999;	display:none;	background-color: #777777;    cursor: pointer;    opacity: 0.7;}
+#iwform .close {position: absolute;   right: 15px;}
+
+/*FORMULARIO*/
+#iwform form{ width: 100%; }
+#iwform form .form-flex{ width: 100%; display: flex; justify-content: space-around;}
+#iwform .col1-2{ width: 50%; box-sizing: border-box; align-items: center;}
+#iwform .col1-2 .field{ width: 90%; margin: 10px auto; box-sizing: border-box; display: flex; flex-direction: column;}
+#iwform .col1-2 .field label{ font-size: 12px; }
+#iwform .col1-2 .field input,
+#iwform .col1-2 .field select{ width: 100%; padding: 4px 10px; box-sizing: border-box; border: 1px solid #212121; border-radius: 5px; font-weight: bold;}
+#iwform .col1-2 .field select{padding: 7px;}
+#iwform input[type="submit"]{ width: 30%; padding: 5px; background: #6089cc; color: #ffffff; font-weight: bold; border: 2px solid #6089cc; border-radius: 7px; transition: all 350ms ease-in-out;  font-size: 16px;}
+#iwform button[type="submit"]:hover{background: #00295a; border: 2px solid #00295a;}

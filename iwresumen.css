@@ -1,0 +1,29 @@
+ div#resumen-visible{
+ 	display: none;
+ 	width: 280px; 
+ 	opacity: 0.8;
+ 	box-sizing: border-box;
+ 	overflow: hidden; 
+ 	position: absolute; 
+ 	left:80%;
+ 	transition: all 400ms ease-in-out;
+ } 
+ div#resumen-visible .res-wrapper{ width: 100%; padding: 12px; display: flex; box-sizing: border-box;}
+ div#resumen-visible .res-wrapper > div{ margin: 1px; }
+ div#resumen-visible .res-wrapper > div > h3{ color: #212121; font-weight: bold; }
+ div.res-wrapper-chaqueta,
+ div.res-wrapper-pantalon{ width: 50%; box-sizing: border-box; }
+
+ /*resumen especial*/
+ .especial .opcion { display:none;	align-items: center;  }
+ .especial .opcion figure{ width: 25px; height: 25px; margin: 1px 7% }
+
+ /*las secciones que van dentro del wrapper y se van generrando de forma dinámica*/
+ div#resumen-visible .res-wrapper section{display: none; box-shadow: 5px 5px 7px rgba(0,0,0,0.3);background: #ffffff;width: 100%;box-sizing: border-box;margin: 1px 0px; }
+ div#resumen-visible figure{ text-align: center; }
+ div#resumen-visible h4{display: none;text-align: center;font-weight: 700;	margin-top: 0px;margin-bottom: 5px;	font-size: 10px;line-height: 12px; margin-top: 5px;}
+ div#resumen-visible p{ font-size: 12px;margin: 0px; line-height: 12px;}
+ [data-section="chaqueta_tejido"] p{ text-align: center; }
+ [data-section="chaqueta_tejido"],
+ [data-section="chaqueta_botones"],
+ [data-section="pantalon_tejido"]{display: none;}
