@@ -25,7 +25,7 @@
 	function inicializarApp(){
 		//$('#resumen-visible').slideUp();
 		mainkeys = Object.keys(TAILORSHOP);
-		//initSVG();
+		initSVG();
 		addRadioListeners();
 		addSpecialButtonListeners('.accordion');
 
@@ -55,22 +55,11 @@
 	//Inicializa los SVG para que no tengan puntitos
 	function initSVG(){
 		let docframes = DOC.querySelectorAll('object');
-		
-		if(null!=docframes){
-			for (let i = 0; i < docframes.length; i++) {
-				console.log('* * *');
-
-				let fillElements = (docframes[i].contentDocument).querySelectorAll('.color2');
-				if(fillElements == null){alert('null fillElements');};
-				for (let j = fillElements.length - 1; j >= 0; j--) {
-					fillElements[j].setAttribute('fill', 'transparent');
-
-				}
+		for (let i = 0; i < docframes.length; i++) {
+			let fillElements = (docframes[i].contentDocument).querySelectorAll('.color2');
+			for (let j = fillElements.length - 1; j >= 0; j--) {
+				fillElements[j].setAttribute('fill', 'transparent');
 			}
-		}else{
-			alert('docframe es null');
-			console.log('------- docframes -------');
-			console.log(docframes);
 		}
 	}
 
@@ -101,7 +90,7 @@
 				case 'bajocuello': TAILOR.isVisibleBajoCuello = true; break;
 				default: break;
 			}
-			//initSVG();
+			initSVG();
 			TAILOR.mostrarIlustracion(datatype, $(esto).data(datatype));
 		}else{
 			MOVEMENTS.mostrarModeloFront();
@@ -263,25 +252,6 @@
 		return val;
 	}
 
-	function activarOpcionesSVGColoresBajoCuello(that, desactivar){
-		$(".ilustracion.forro").css({'left': '250%', 'opacity':0});
-		
-		desactivar = $(that).parents('.check-content').data('option');
-
-		for(let i=0; i< input_hide_colorbajocuello.length; i++){
-			$("[data-val='"+input_hide_colorbajocuello[i]+"']").hide();
-		}
-
-		for (let i = 0; i < trad_delete_colorbajocuello[desactivar].length; i++) {
-			$('#'+trad_delete_colorbajocuello[desactivar][i]).css({'left': '250%', 'opacity':0});
-			$('#'+desactivar).css({'left': '0%', 'opacity':1});
-		}
-
-		for(let i=0; i< input_show_colorbajocuello[desactivar].length; i++){
-			$("[data-val='"+input_show_colorbajocuello[desactivar][i]+"']").show();
-		}
-	}
-
 
 
 	function activarOpcionesColoresBajoCuello(that, desactivar){
@@ -337,7 +307,6 @@
 				//Ejecuta una u otra función depenciendo de si hay que poner una imagen o no en el maniquí;
 				data  = pretty(addRadioColorsListeners(this, val));
 
-
 				if(data == null || data == undefined){return;}
 				(data.data).map((el)=>{ return el.trim().toLowerCase(); });
 
@@ -351,9 +320,7 @@
 						
 						//DATA BINDING DE CHAQUETA - BAJOCUELLO
 						if( (data.data[0]=='chaqueta' && data.data[1]=='bajocuello') ){ 
-							alert('L325-trabajando en ilustraciones');
-							activarOpcionesSVGColoresBajoCuello(this, desactivar);
-							//activarOpcionesColoresBajoCuello(this, desactivar, input_hide_colorbajocuello, trad_delete_colorbajocuello);
+							activarOpcionesColoresBajoCuello(this, desactivar, input_hide_colorbajocuello, trad_delete_colorbajocuello);
 						}						
 
 						//DATA BINDING DE CHAQUETA - FORRO >> desactivado
@@ -378,8 +345,6 @@
 						}
 						MOVEMENTS.mostrarModeloBack(mostrar_coderas);
 					}
-
-
 
 					//muestra forros
 					if (data.data[1] == 'forro' || data.data[1] == 'colorforro') {
