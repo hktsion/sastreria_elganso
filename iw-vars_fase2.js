@@ -60,45 +60,60 @@ let COLORS = {
 	},
 }
 
+
+
 let TRANSLATOR = {
-	'liso_marino':['Liso', 'Marino'],
-	'liso_negro': ['Liso', 'Negro'],
-	'liso_gris_marengo':['Liso', 'Gris marengo'],
-	'liso_grisclaro':['Liso', 'Gris claro'],
-	'espiga_marino':['Espiga', 'Marino'],
-	'espiga_gris':['Espiga', 'Gris'],
-	'ojodeperdiz_marino':['Ojo de perdiz', 'Marino'],
-	'ojodeperdiz_grismarengo':['Ojo de perdiz', 'Gris marengo'],
-	'ojodeperdiz_grisclaro':['Ojo de perdiz', 'Gris claro'],
-	'rayadiplomatica_azul':['Raya diplomática', 'Azul'],
-	'cuadroventana_azul':['Cuadro ventana', 'Azul'],
-	'cuadrogales_gris':['Príncipe de Gales', 'Gris'],
-	'cuadrogales_gris':['Príncipe de Gales', 'Gris'],
-	'cuadrogales_perfil':['Príncipe de Gales', 'Perfil'],
-	'cuadrogales_celeste':['Príncipe de Gales', 'Celeste'],
+	'liso_azulguabello':['Liso', 'Azul Guabello 2472C/100/5'],
+	'liso_azulmarzotto':['Liso', 'Azul Marzotto 83268/0010/0040'],
+	'liso_grismarzotto':['Liso', 'Gris Marzotto 83268/0010/0042'],
+	'liso_grisguabello':['Liso', 'Gris 2472C/100/2'],
+	'lanaalgodon_gris837-247':['Lana Algodón', 'Gris 837/247'],
+	'lanaalgodon_gris302-128':['Lana Algodón', 'Gris 302/128B'],
+	'lanaalgodon_azul837-254':['Lana Algodón', 'Azul 837/254'],
+	'lanaalgodon_azul837-226':['Lana Algodón', 'Azul 837/226'],
+	'lanaalgodon_azul302-144':['Lana Algodón', 'Azul 302/144C'],
+	'ojodeperdiz_negromarzotto':['Ojo de perdiz', 'Negro Marzotto 98362/0070/0022'],
+	'ojodeperdiz_azulmarzotto':['Ojo de perdiz', 'Azul Marzotto 98362/0070/0020'],
+	'ojodeperdiz_grismarzottoclaro':['Ojo de perdiz', 'Gris Marzotto 98362/0070/0031'],
+	'ojodeperdiz_grismarzottooscuro':['Ojo de perdiz', 'Gris Marzotto 98362/0070/0040'],
+	'espiga_marino':['Espiga', 'Azul Guabello 2472U/3/5'],
+	'espiga_gris':['Espiga', 'Gris Guabello 2472U/3/2'],
+	'rayadiplomatica_azul':['Línea diplomática', 'Azul marzotto 87492/0520/0011'],
+	'cuadroventana_azul':['Cuadro ventana', 'Azul Marzotto 87492/0930/0010'],
+	'cuadrogales_gris':['Príncipe de Gales', 'Marzotto 87492/0930/0010'],
+
 	'lanaalgodon_beige':['Lana algodón', 'Beige'],
 	'lanaalgodon_gris':['Lana algodón', 'Gris'],
 	'lanaalgodon_marino':['Lana algodón', 'Marino'],
+	'lanaalgodon_marino302144.png':['Lana algodón', 'Marino 302-144'],
+
 	'bajocuello_unasolapieza':['Bajo cuello', 'Una sola pieza'],
 	'bajocuello_palaypie':['Bajo cuello', 'Pala y pie'],
 	'bajocuello_palapieypiping':['Bajo cuello', 'Pala, piping y pie'],
+
 	'solapas_estrecha':['Solapas', 'Estrecha'],
 	'solapas_clasica':['Solapas', 'Clásica'],
+
 	'botones_dos':['Botones', 'Dos botones'],
 	'botones_tres':['Botones', 'Tres botones'],
+
 	'bolsillos_doscarterasinclinadas':['Bolsillos', 'Dos carteras inclinadas' ],
 	'bolsillos_trescarterasinclinadas':['Bolsillos', 'Tres carteras inclinadas' ],
 	'bolsillos_doscarterasrectas':['Bolsillos', 'Dos carteras rectas' ],
 	'bolsillos_trescarterasrectas':['Bolsillos', 'Tres carteras rectas' ],
 	'bolsillos_bolsillopecho':['Bolsillos', 'Parche con bolsillo pecho' ],
 	'bolsillos_parchepecho':['Bolsillos', 'Parche con parche pecho' ],
+
 	'coderas_si':['Coderas', 'Con coderas' ],
 	'coderas_no':['Coderas', 'Sin coderas' ],
+
 	'colorhilo_ojal':['Color hilo', 'Ojal'],
 	'colorhilo_boton':['Color hilo', 'Botón'],
 	'forro_conforro':['Forro', 'Con forro'],
+
 	'forro_sinforro':['Forro', 'Sin forro'],
 	'forro_medioforro':['Forro', 'Medio forro'],
+
 	'pala_827':['Pala', '#827']
 }
 

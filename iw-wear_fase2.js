@@ -19,7 +19,6 @@
 	SS.TAILORSHOP = {};
 
 
-	
 	//------------------------------------------------------------------> INICIALIZACIÓN DE LA APP
 	//@mainkeys: ['cahqueta', 'pantalon']
 	//@addlisteners: añade por primera vez los listeners al DOM
@@ -44,13 +43,26 @@
 		}
 	}
 
+	//Cambiar la función por la función que verifique si es
+	function isMobile() {
+		if(window.innerWidth < 800) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	//------------------------------------------------------------------ FUNCIONES DE ILUSTRACIONES
 	//Muestra ILUSTRACIÓN COMPLETA
 	TAILOR.mostrarIlustracion = function(datav_a, datav_b){
 		//Quita de pantalla estos elementos
 		$('.maniqui-wrapper').css({'left': '100%'	});
 		$('.maniqui-wrapper').removeClass('zoom');
+
+
 		$('#resumen-visible').animate({'opacity': 0,},'200');	
+		//if(!isMobile()){$('#resumen-visible').animate({'opacity': 0,},'200');}
+
 		if(datav_b == 'bajocuello'){$('.ilustracion.forro').css({left: 250+'%', 'opacity':0});}
 		if(datav_b == 'forro'){ $('.ilustracion.bajocuello').css({left: 250+'%', 'opacity':0});}
 		if(datav_b == 'pantalon'){$('.ilustracion.pantalon').css({left: 250+'%', 'opacity':0});}
@@ -196,7 +208,6 @@
 
 		if($(that).hasClass('radiobox')){ 
 
-
 			//Elimina elmarcado de los del mismo grupo;
 			$(that).parents('.box').siblings('.box').removeClass('boxed');
 			//pone el "checkeado" al párrafo seleccionado y quita el de los hermanos
@@ -213,6 +224,7 @@
 
 			//Borra los elementos de color de la pantalla
 			//$(that).parents('.level-3').css({'display': 'none'});
+
 
 		}else{
 			//Cuando "NO EXISTE UN SEGUNDO NIVEL"

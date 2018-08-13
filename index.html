@@ -1,6 +1,6 @@
 <div id="iwmain">
+
 	<!-- Formulario de contacto -->
-	
 	<div id="iwform" style="display: none;">
 		<div class="content-iwform">
 			<div class="close"><a href="#" id="close"><img src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/close.png" alt="close"/></a></div>
@@ -12,10 +12,12 @@
 						<div class="form-flex">
 							<div class="col1-2">
 								<div class="field">
-									<input id="iwnombre" type="text" name="iwnombre" placeholder="Nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Formato sólo letras" required>
+									<input id="iwnombre" maxlength="50" type="text" name="iwnombre" placeholder="Nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" title="Formato sólo letras" required>
+									<p class="iwerror"></p>
 								</div>
 								<div class="field">
-									<input id="iwemail" type="email" name="iwemail" placeholder="Email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required>
+									<input id="iwemail" type="email" maxlength="50" name="iwemail" placeholder="Email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required>
+									<p class="iwerror"></p>
 								</div>
 								<div class="field">
 									<div class="iwtienda">
@@ -34,10 +36,12 @@
 
 							<div class="col1-2">
 								<div class="field">
-									<input id="iwapellidos" type="text" name="iwapellidos" placeholder="Apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" required title="Formato sólo letras">
+									<input id="iwapellidos" type="text" name="iwapellidos"maxlength="50" placeholder="Apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" required title="Formato sólo letras">
+									<p class="iwerror"></p>
 								</div>
 								<div class="field">
-									<input id="iwtelefono" type="tel" name="iwtelefono" placeholder="Teléfono" pattern="[6|9][0-9]{8}" required title="El número de teléfono debe comenzar por '6' o '9' seguido de 8 dígitos.">
+									<input id="iwtelefono" type="tel" maxlength="9" name="iwtelefono" placeholder="Teléfono" pattern="[6|9][0-9]{8}" required title="El número de teléfono debe comenzar por '6' o '9' seguido de 8 dígitos.">
+									<p class="iwerror"></p>
 								</div>
 								<div class="field">
 									<div class="iwhorarios">
@@ -326,6 +330,9 @@
 		<div class="ilustracion forro">
 			<object  class="object" id="tipoforro" data="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/ilustraciones/forro_conforro.svg" type="image/svg+xml">
 			</object>
+			<figure id="leyenda_forro">
+				<img class="leyenda" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/ilustraciones/leyenda_conforro.png" alt="leyenda_forro">
+			</figure>
 		</div>
 
 		<!-- Ilustración PANTALÓN LARGO -->
@@ -349,6 +356,7 @@
 				</figure>
 			</div>
 		</div>
+
 		<!-- MODELO BACK -->
 		<div id="maniqui-wrapper-back" class="maniqui-wrapper">
 			<div id="maniqui-inner-back" class="maniqui-inner">
@@ -385,41 +393,39 @@
 										<div class="l3-container">	
 
 											<div class="box">
-												<label for="chaqueta_tejido_liso_marino">
+												<label for="chaqueta_tejido_liso_azulguabello">
 													<figure>
-														<img title="Liso marino" alt="liso_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_marino.png" />
+														<img title="Liso Azul Guabello" alt="liso_azulguabello.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_azulguabello.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_liso_marino" type="radio" name="chaqueta_tejido" value="marino">
-												<div class="check"></div>
+												<input class="radiobox" id="chaqueta_tejido_liso_azulguabello" type="radio" name="chaqueta_tejido" value="azulguabello">
 											</div>	
 											<div class="box">
-												<label for="chaqueta_tejido_liso_negro">
+												<label for="chaqueta_tejido_liso_azulmarzotto">
 													<figure>
-														<img title="Liso negro" alt="liso_negro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_negro.png" />
+														<img title="Liso Azul Marzotto" alt="liso_azulmarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_azulmarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_liso_negro" type="radio" name="chaqueta_tejido" value="negro">
-												<div class="check"></div>
+												<input class="radiobox" id="chaqueta_tejido_liso_azulmarzotto" type="radio" name="chaqueta_tejido" value="azulmarzotto">
 											</div>	
 											<div class="box">
-												<label for="chaqueta_tejido_liso_grismarengo">
+												<label for="chaqueta_tejido_liso_grisguabello">
 													<figure>
-														<img title="Liso gris marengo" alt="liso_grismarengo.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_grismarengo.png" />
+														<img title="Liso Gris Guabello" alt="liso_grisguabello.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_grisguabello.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_liso_grismarengo" type="radio" name="chaqueta_tejido" value="gris-marengo">
-												<div class="check"></div>
+												<input class="radiobox" id="chaqueta_tejido_liso_grisguabello" type="radio" name="chaqueta_tejido" value="grisguabello">
 											</div>	
 											<div class="box">
-												<label for="chaqueta_tejido_liso_grisclaro">
+												<label for="chaqueta_tejido_liso_grismarzotto">
 													<figure>
-														<img title="Liso claro" alt="liso_grisclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_grisclaro.png" />
+														<img title="Liso Gris Marzotto" alt="liso_grismarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/liso_grismarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_liso_grisclaro" type="radio" name="chaqueta_tejido" value="grisclaro">
-												<div class="check"></div>
-											</div>
+												<input class="radiobox" id="chaqueta_tejido_liso_grismarzotto" type="radio" name="chaqueta_tejido" value="grismarzotto">
+											</div>	
+											
+											
 										</div>
 									</div>
 								</div>
@@ -459,33 +465,40 @@
 									<p>Ojo de perdiz</p>
 									<div class="level-3">
 										<div class="l3-container">	
+											
 											<div class="box">
-												<label for="chaqueta_tejido_ojodeperdiz_marino">
+												<label for="chaqueta_tejido_ojodeperdiz_negromarzotto">
 													<figure>
-														<img  title="Ojo de perdiz marino" alt="ojodeperdiz_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_marino.png" />
+														<img  title="Ojo de perdiz negro" alt="ojodeperdiz_negromarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_negromarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_marino" type="radio" name="chaqueta_tejido" value="marino">
-												<div class="check"></div>
-											</div>	
-											<div class="box">
-												<label for="chaqueta_tejido_ojodeperdiz_grismarengo">
-													<figure>
-														<img  title="Ojo de perdiz gris marengo" alt="ojodeperdiz_grismarengo.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_grismarengo.png" />
-													</figure>
-												</label>
-												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_grismarengo" type="radio" name="chaqueta_tejido" value="grismarengo">
-												<div class="check"></div>
+												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_negromarzotto" type="radio" name="chaqueta_tejido" value="negromarzotto">
 											</div>
 											<div class="box">
-												<label for="chaqueta_tejido_ojodeperdiz_grisclaro">
+												<label for="chaqueta_tejido_ojodeperdiz_azulmarzotto">
 													<figure>
-														<img  title="Ojo de perdiz marino" alt="ojodeperdiz_grisclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_grisclaro.png" />
+														<img  title="Ojo de perdiz azul marzotto" alt="ojodeperdiz_azulmarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_azulmarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_grisclaro" type="radio" name="chaqueta_tejido" value="grisclaro">
-												<div class="check"></div>
+												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_azulmarzotto" type="radio" name="chaqueta_tejido" value="azulmarzotto">
 											</div>
+											<div class="box">
+												<label for="chaqueta_tejido_ojodeperdiz_grismarzottooscuro">
+													<figure>
+														<img  title="Ojo de perdiz gris marzotto ocuro" alt="ojodeperdiz_grismarzottooscuro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_grismarzottooscuro.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_grismarzottooscuro" type="radio" name="chaqueta_tejido" value="grismarzottooscuro">
+											</div>
+											<div class="box">
+												<label for="chaqueta_tejido_ojodeperdiz_grismarzottoclaro">
+													<figure>
+														<img  title="Ojo de perdiz gris marzotto claro" alt="ojodeperdiz_grismarzottoclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/ojodeperdiz_grismarzottoclaro.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="chaqueta_tejido_ojodeperdiz_grismarzottoclaro" type="radio" name="chaqueta_tejido" value="grismarzottoclaro">
+											</div>
+
 										</div>
 									</div>
 								</div>
@@ -544,36 +557,53 @@
 									</div>
 								</div>
 
-								<!-- lanaalgodon  Beige - Gris - Marino-->
+								<!-- lanaalgodon -->
 								<div class="check-content" data-val="chaqueta_tejido_lanaalgodon">
 									<p>Lana algodón</p>
 									<div class="level-3">
 										<div class="l3-container">	
 											<div class="box">
-												<label for="chaqueta_tejido_lanaalgodon_beige">
+												<label for="chaqueta_tejido_lanaalgodon_azul302-144">
 													<figure>
-														<img  title="lanaalgodon beige" alt="lanaalgodon_beige.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_beige.png" />
+														<img  title="lanaalgodon azul302-144" alt="lanaalgodon_azul302-144.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_azul302-144.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_beige" type="radio" name="chaqueta_tejido" value="beige">
-												<div class="check"></div>
-											</div>	
+												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_azul302-144" type="radio" name="chaqueta_tejido" value="azul302-144">
+											</div>
 											<div class="box">
-												<label for="chaqueta_tejido_lanaalgodon_gris">
+												<label for="chaqueta_tejido_lanaalgodon_azul837-226">
 													<figure>
-														<img  title="lanaalgodon gris" alt="lanaalgodon_gris.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_gris.png" />
+														<img  title="lanaalgodon azul837-226" alt="lanaalgodon_azul837-226.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_azul837-226.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_gris" type="radio" name="chaqueta_tejido" value="gris">
+												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_azul837-226" type="radio" name="chaqueta_tejido" value="azul837-226">
 												<div class="check"></div>
 											</div>
 											<div class="box">
-												<label for="chaqueta_tejido_lanaalgodon_marino">
+												<label for="chaqueta_tejido_lanaalgodon_azul837-254">
 													<figure>
-														<img  title="lanaalgodon marino" alt="lanaalgodon_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_marino.png" />
+														<img  title="lanaalgodon azul837-254" alt="lanaalgodon_azul837-254.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_azul837-254.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_marino" type="radio" name="chaqueta_tejido" value="marino">
+												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_azul837-254" type="radio" name="chaqueta_tejido" value="azul837-254">
+												<div class="check"></div>
+											</div>	
+											<div class="box">
+												<label for="chaqueta_tejido_lanaalgodon_gris302-128">
+													<figure>
+														<img  title="lanaalgodon gris302-128" alt="lanaalgodon_gris302-128.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_gris302-128.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_gris302-128" type="radio" name="chaqueta_tejido" value="gris302-128">
+												<div class="check"></div>
+											</div>	
+											<div class="box">
+												<label for="chaqueta_tejido_lanaalgodon_gris837-247">
+													<figure>
+														<img  title="lanaalgodon_gris837-247" alt="lanaalgodon_gris837-247.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/chaqueta/tejido/lanaalgodon_gris837-247.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="chaqueta_tejido_lanaalgodon_gris837-247" type="radio" name="chaqueta_tejido" value="gris837-247">
 												<div class="check"></div>
 											</div>
 										</div>
@@ -2444,41 +2474,37 @@
 										<div class="l3-container">	
 
 											<div class="box">
-												<label for="pantalon_tejido_liso_marino">
+												<label for="pantalon_tejido_liso_azulguabello">
 													<figure>
-														<img title="Liso marino" alt="liso_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_marino.png" />
+														<img title="Liso Azul Guabello" alt="liso_azulguabello.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_azulguabello.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_liso_marino" type="radio" name="pantalon_tejido" value="marino">
-												<div class="check"></div>
+												<input class="radiobox" id="pantalon_tejido_liso_azulguabello" type="radio" name="pantalon_tejido" value="azulguabello">
 											</div>	
 											<div class="box">
-												<label for="pantalon_tejido_liso_negro">
+												<label for="pantalon_tejido_liso_azulmarzotto">
 													<figure>
-														<img title="Liso negro" alt="liso_negro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_negro.png" />
+														<img title="Liso Azul Marzotto" alt="liso_azulmarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_azulmarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_liso_negro" type="radio" name="pantalon_tejido" value="negro">
-												<div class="check"></div>
+												<input class="radiobox" id="pantalon_tejido_liso_azulmarzotto" type="radio" name="pantalon_tejido" value="azulmarzotto">
 											</div>	
 											<div class="box">
-												<label for="pantalon_tejido_liso_grismarengo">
+												<label for="pantalon_tejido_liso_grisguabello">
 													<figure>
-														<img title="Liso gris marengo" alt="liso_grismarengo.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_grismarengo.png" />
+														<img title="Liso Gris Guabello" alt="liso_grisguabello.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_grisguabello.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_liso_grismarengo" type="radio" name="pantalon_tejido" value="gris-marengo">
-												<div class="check"></div>
+												<input class="radiobox" id="pantalon_tejido_liso_grisguabello" type="radio" name="pantalon_tejido" value="grisguabello">
 											</div>	
 											<div class="box">
-												<label for="pantalon_tejido_liso_grisclaro">
+												<label for="pantalon_tejido_liso_grismarzotto">
 													<figure>
-														<img title="Liso claro" alt="liso_grisclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_grisclaro.png" />
+														<img title="Liso Gris Marzotto" alt="liso_grismarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/liso_grismarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_liso_grisclaro" type="radio" name="pantalon_tejido" value="grisclaro">
-												<div class="check"></div>
-											</div>
+												<input class="radiobox" id="pantalon_tejido_liso_grismarzotto" type="radio" name="pantalon_tejido" value="grismarzotto">
+											</div>	
 										</div>
 									</div>
 								</div>
@@ -2518,33 +2544,43 @@
 									<p>Ojo de perdiz</p>
 									<div class="level-3">
 										<div class="l3-container">	
+											
 											<div class="box">
-												<label for="pantalon_tejido_ojodeperdiz_marino">
+												<label for="pantalon_tejido_ojodeperdiz_negromarzotto">
 													<figure>
-														<img  title="Ojo de perdiz marino" alt="ojodeperdiz_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_marino.png" />
+														<img  title="Ojo de perdiz negro" alt="ojodeperdiz_negromarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_negromarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_marino" type="radio" name="pantalon_tejido" value="marino">
-												<div class="check"></div>
-											</div>	
-											<div class="box">
-												<label for="pantalon_tejido_ojodeperdiz_grismarengo">
-													<figure>
-														<img  title="Ojo de perdiz gris marengo" alt="ojodeperdiz_grismarengo.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_grismarengo.png" />
-													</figure>
-												</label>
-												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_grismarengo" type="radio" name="pantalon_tejido" value="grismarengo">
-												<div class="check"></div>
+												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_negromarzotto" type="radio" name="pantalon_tejido" value="negromarzotto">
 											</div>
 											<div class="box">
-												<label for="pantalon_tejido_ojodeperdiz_grisclaro">
+												<label for="pantalon_tejido_ojodeperdiz_azulmarzotto">
 													<figure>
-														<img  title="Ojo de perdiz marino" alt="ojodeperdiz_grisclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_grisclaro.png" />
+														<img  title="Ojo de perdiz azul marzotto" alt="ojodeperdiz_azulmarzotto.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_azulmarzotto.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_grisclaro" type="radio" name="pantalon_tejido" value="grisclaro">
-												<div class="check"></div>
+												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_azulmarzotto" type="radio" name="pantalon_tejido" value="azulmarzotto">
 											</div>
+											<div class="box">
+												<label for="pantalon_tejido_ojodeperdiz_grismarzottooscuro">
+													<figure>
+														<img  title="Ojo de perdiz gris marzotto ocuro" alt="ojodeperdiz_grismarzottooscuro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_grismarzottooscuro.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_grismarzottooscuro" type="radio" name="pantalon_tejido" value="grismarzottooscuro">
+											</div>
+											<div class="box">
+												<label for="pantalon_tejido_ojodeperdiz_grismarzottoclaro">
+													<figure>
+														<img  title="Ojo de perdiz gris marzotto claro" alt="ojodeperdiz_grismarzottoclaro.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/ojodeperdiz_grismarzottoclaro.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="pantalon_tejido_ojodeperdiz_grismarzottoclaro" type="radio" name="pantalon_tejido" value="grismarzottoclaro">
+											</div>
+
+
+
+											
 										</div>
 									</div>
 								</div>
@@ -2609,30 +2645,47 @@
 									<div class="level-3">
 										<div class="l3-container">	
 											<div class="box">
-												<label for="pantalon_tejido_lanaalgodon_beige">
+												<label for="pantalon_tejido_lanaalgodon_azul302-144">
 													<figure>
-														<img  title="lanaalgodon beige" alt="lanaalgodon_beige.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_beige.png" />
+														<img  title="lanaalgodon azul302-144" alt="lanaalgodon_azul302-144.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_azul302-144.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_lanaalgodon_beige" type="radio" name="pantalon_tejido" value="beige">
-												<div class="check"></div>
-											</div>	
+												<input class="radiobox" id="pantalon_tejido_lanaalgodon_azul302-144" type="radio" name="pantalon_tejido" value="azul302-144">
+											</div>
 											<div class="box">
-												<label for="pantalon_tejido_lanaalgodon_gris">
+												<label for="pantalon_tejido_lanaalgodon_azul837-226">
 													<figure>
-														<img  title="lanaalgodon gris" alt="lanaalgodon_gris.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_gris.png" />
+														<img  title="lanaalgodon azul837-226" alt="lanaalgodon_azul837-226.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_azul837-226.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_lanaalgodon_gris" type="radio" name="pantalon_tejido" value="gris">
+												<input class="radiobox" id="pantalon_tejido_lanaalgodon_azul837-226" type="radio" name="pantalon_tejido" value="azul837-226">
 												<div class="check"></div>
 											</div>
 											<div class="box">
-												<label for="pantalon_tejido_lanaalgodon_marino">
+												<label for="pantalon_tejido_lanaalgodon_azul837-254">
 													<figure>
-														<img  title="lanaalgodon marino" alt="lanaalgodon_marino.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_marino.png" />
+														<img  title="lanaalgodon azul837-254" alt="lanaalgodon_azul837-254.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_azul837-254.png" />
 													</figure>
 												</label>
-												<input class="radiobox" id="pantalon_tejido_lanaalgodon_marino" type="radio" name="pantalon_tejido" value="marino">
+												<input class="radiobox" id="pantalon_tejido_lanaalgodon_azul837-254" type="radio" name="pantalon_tejido" value="azul837-254">
+												<div class="check"></div>
+											</div>	
+											<div class="box">
+												<label for="pantalon_tejido_lanaalgodon_gris302-128">
+													<figure>
+														<img  title="lanaalgodon gris302-128" alt="lanaalgodon_gris302-128.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_gris302-128.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="pantalon_tejido_lanaalgodon_gris302-128" type="radio" name="pantalon_tejido" value="gris302-128">
+												<div class="check"></div>
+											</div>	
+											<div class="box">
+												<label for="pantalon_tejido_lanaalgodon_gris837-247">
+													<figure>
+														<img  title="lanaalgodon_gris837-247" alt="lanaalgodon_gris837-247.png" src="http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/pantalon/tejido/lanaalgodon_gris837-247.png" />
+													</figure>
+												</label>
+												<input class="radiobox" id="pantalon_tejido_lanaalgodon_gris837-247" type="radio" name="pantalon_tejido" value="gris837-247">
 												<div class="check"></div>
 											</div>
 										</div>
@@ -3601,50 +3654,17 @@
 								</div><!-- fin FORRO BOLSILLOS -->
 
 								<!-- Botones tirantes -->
-								<div class="check-content" style="display: none;">
-									<input id="pantalon_detalleinterior_botonestirantessi" name="pantalon_botonestirantes" type="radio" value="pantalon_detalleinterior_botonestirantes" /> 
+								<div class="check-content">
+									<input id="pantalon_detalleinterior_botonestirantessi" name="pantalon_botonestirantes" type="radio" value="pantalon_detalleinterior_botonestirantes_si" checked /> 
 									<label for="pantalon_detalleinterior_botonestirantessi">Con botones tirantes</label>
 
-									<input id="pantalon_detalleinterior_botonestirantesno" name="pantalon_botonestirantes" type="radio" value="pantalon_detalleinterior_botonestirantes" /> 
+									<input id="pantalon_detalleinterior_botonestirantesno" name="pantalon_botonestirantes" type="radio" value="pantalon_detalleinterior_botonestirantes_no" /> 
 									<label for="pantalon_detalleinterior_botonestirantesno">Sin botones tirantes</label>
 								</div><!-- Botones tirantes -->
-
-
-
 
 							</div>
 						</div>
 					</div><!-- fin nivel-2 FORROS BOLSILLO-->
-
-
-					<!-- 
-					<div class="row-level-2">
-						<button class="accordion">BOTONES PANTALÓN</button>
-						<div class="panel">
-							<div>
-								<div class="check-content">
-									<input id="pantalon_botonespantalon_opcion1" type="radio" value="pantalon_botonespantalon_opcion1" /> 
-									<label for="pantalon_botonespantalon_opcion1">Meter opciones de botones</label>
-							
-								</div>
-							</div>
-						</div>
-					</div>
-
-					
-					<div class="row-level-2">
-						<button class="accordion">HILO PANTALÓN</button>
-						<div class="panel">
-							<div>
-								
-								<div class="check-content">
-									<input id="pantalon_hilopantalon_opcion1" type="radio" name="pantalon_hilopantalon" value="pantalon_hilopantalon_opcion1" /> 
-									<label for="pantalon_hilopantalon_opcion1">Opciones para hilo pantalón</label>
-								
-								</div>
-							</div>
-						</div>
-					</div>-->
 				</div> <!-- FIN DE OPCIONES DE PANTALÓN -->
 
 
@@ -3653,8 +3673,228 @@
 
 
 				<!-- OPCIONES RESUMEN -->
-				<div class="iwctrls">
-					<button class="iwcontroll"  data-value="resumen" data-up="false">RESUMEN</button>
+				<div class="iwctrls resumencontroll">
+					<button class="iwcontroll" data-value="resumen" data-up="false">RESUMEN</button>
+					<div class="row-level-2">
+						<div id="resumen-visible-mobile">
+							<div class="res-wrapper">
+								<div class="res-wrapper-chaqueta">
+									<h3>CHAQUETA</h3>
+									<section data-section="chaqueta_tejido">
+										<figure>
+											<img  alt="" src="" />
+										</figure>
+										<div>
+											<h4>TEJIDO</h4>
+											<p></p>
+										</div>
+									</section>
+									<!-- <section data-section="chaqueta_bajocuello">
+										<div>
+											<h4>BAJO CUELLO</h4>
+											<p></p>
+										</div>
+									</section> -->
+									<section class="especial" data-section="chaqueta_colorbajocuello">
+										<div><h4>COLOR BAJOCUELLO</h4></div>
+										<div class="opcion opcion-pala">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-piping">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-pie">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+									<!-- <section data-section="chaqueta_solapas">
+										<div>
+											<h4>SOLAPAS</h4>
+											<p></p>
+										</div>
+									</section> -->
+									<!-- <section data-section="chaqueta_botones">
+										<div>
+											<h4>BOTONES</h4>
+											<p></p>
+										</div>
+									</section> -->
+									<!-- <section data-section="chaqueta_bolsillos">
+										<div>
+											<h4>BOLSILLOS</h4>
+											<p></p>
+										</div>
+									</section> -->
+									<!-- <section data-section="chaqueta_coderas">
+										<div>
+											<h4>CODERAS</h4>
+											<p></p>
+										</div>
+									</section> -->
+									<section class="especial"data-section="chaqueta_colorcoderas">
+										<div><h4>COLOR CODERAS</h4></div>
+										<div class="opcion opcion-antecolor">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>	
+
+									<section class="especial"data-section="chaqueta_colorhilo">
+										<div><h4>COLOR HILO</h4></div>
+										<div class="opcion opcion-ojales">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-botones">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+
+									<!-- <section data-section="chaqueta_forro">
+										<div>
+											<h4>FORRO</h4>
+											<p></p>
+										</div>
+									</section> -->
+
+									<section class="especial"data-section="chaqueta_colorforro">
+										<div><h4>COLOR FORRO</h4></div>
+										<div class="opcion opcion-delantero">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-espalda">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-costado">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-piping">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+
+									<section class="especial" data-section="chaqueta_forromangas">
+										<div><h4>FORRO MANGAS</h4></div>
+										<div class="opcion opcion-antecolor">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+									<section class="especial" data-section="chaqueta_cinta">
+										<div><h4>COLGADOR</h4></div>
+										<div class="opcion opcion-colgador">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<!-- <p></p> -->
+										</div>
+									</section>
+
+
+								</div>
+
+								<div class="res-wrapper-pantalon">
+									<h3>PANTALÓN</h3>
+									<section data-section="pantalon_tejido">
+										<figure>
+											<img  alt="" src="" />
+										</figure>
+										<div>
+											<h4>TEJIDO</h4>
+											<p></p>
+										</div>
+									</section>
+									<section class="especial" data-section="pantalon_detalleexterior">
+										<div><h4>DETALLE EXTERIOR</h4></div>
+										<div class="opcion opcion-colorhilo">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-fondobolsillo">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-vivobolsillo">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+
+									<section class="especial" data-section="pantalon_detalleinterior">
+										<div><h4>DETALLE INTERIOR</h4></div>
+										<div class="opcion opcion-pretina">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-vivointerior">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+										<div class="opcion opcion-forrobolsillos">
+											<figure>
+												<img  alt="" src="" />
+											</figure>
+											<p></p>
+										</div>
+									</section>
+
+									<!-- <section data-section="pantalon_patron">
+										<div>
+											<h4>PATRÓN</h4>
+											<p></p>
+										</div>
+									</section> -->
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- RESUMEN DE DATOS -->
+					<!---->
+
+
 				</div><!-- FIN OPCIONES RESUMEN -->
 
 			</div>

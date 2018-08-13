@@ -28,8 +28,6 @@ var $ = jQuery.noConflict();
 		$('#resumen-visible').animate({'opacity': 0,},'300');
 		//if(TAILOR.isVisibleBajoCuello){	$('.ilustracion.bajocuello').css({'display': 'none'}); } 
 		$(".ilustracion.forro > object").attr('data', url);
-
-		setTimeout(callback, 300);
 	}
 
 

@@ -88,13 +88,31 @@ button.accordion{ font-size: 12px; }
 
 
 /*RADIO NIVEL 2*/
-.check-content > [type="radio"] {position: absolute;
-	left: -9999px; 
-	-webkit-appearance: checkbox; 
-	-moz-appearance: checkbox;    
-	-ms-appearance: checkbox;     
+.check-content > [type="radio"] {position: absolute; left: -9999px; -webkit-appearance: checkbox; -moz-appearance: checkbox;-ms-appearance: checkbox;}
+.check-content>p{margin: 0 45px 0px !important;}
+.check-content>p:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:5px;
+	width: 20px;
+	height: 20px;
+	background: #D1D3D4;
 }
-.check-content>p{margin: 0 0 0px !important;}
+
+.check-content>p.checkeado:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:5px;
+	width: 20px;
+	height: 20px;
+	background-color: #4DCB6D;
+	content: '\2714';
+	text-align: center;
+}
+
+
 .check-content >[type="radio"] + label:after {content: '';position: absolute;}
 .check-content >[type="radio"] + label {display: block;position: relative;	padding-left: 46px;cursor: pointer;}
 .check-content >[type="radio"] + label:after {width: 20px; height: 20px;	top: 0; left: 0;}
@@ -118,13 +136,28 @@ label { z-index: 10;}
 
 /*CAPAS*/
 figure.capa{position: absolute;top: 0px; transform: scale(1,1); transition:  top 500ms ease-in-out,transform 900ms cubic-bezier(0.6, 0.61, 0.4, 0.65)}
-figure.capa.zoom{ transform: scale(2,2); }
+figure.capa.zoom{ transform: scale(1.8,1.8); }
 figure.capa.zoom-pantalon{ top: -31.3%; }
 figure.capa.zoom-chaqueta{ top: 35.3%; }
 
 /*NIVEL 3*/
-.level-3{ position: absolute; left: 285px; top: -27px; border: 2px solid #dadada; box-sizing: border-box; display: none; }
+.level-3{z-index:1001; position: absolute; left: 285px; top: -27px; border: 2px solid #dadada; box-sizing: border-box; display: none; }
 .level-3.level-3-up{top: -68px;}
+[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3.level-3-up{top: -135px;}
+[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3:before{ top: calc(90% - 10px);}
+[data-val="pantalon_detalleinterior_vivointerior"] > .level-3.level-3-up{top: -110px;}
+[data-val="pantalon_detalleinterior_vivointerior"] > .level-3:before{top: calc(77% - 10px);}
+[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up{top: -83px;}
+[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3:before{ top: calc(59% - 10px);}
+[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3.level-3-up{top: -109px;}
+[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3:before{ top: calc(78% - 10px);}
+[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up{top: -85px;}
+[data-val="pantalon_detalleinterior_pretina"] > .level-3:before{top: calc(59% - 10px);}
+[data-val="chaqueta_forromangas_antecolor"] > .level-3{top: -37px;}
+[data-val="chaqueta_forromangas_antecolor"] > .level-3:before{top: calc(52% - 10px) !important;}
+[data-val="chaqueta_cinta_colgador"] > .level-3{top: -64px !important;}
+[data-val="chaqueta_cinta_colgador"] > .level-3:before{top: calc(84% - 10px) !important;}
+
 .level-3 .l3-container{ background: #ffffff; padding: 5px; display: flex;}
 .level-3.level-3-up.level-3-long .l3-container,
 .level-3.level-3-up.level-3-medium .l3-container,
@@ -142,11 +175,13 @@ figure.capa.zoom-chaqueta{ top: 35.3%; }
 
 
 /*CONTROLES*/
+#iwcontrols{z-index: 1000;}
 #iwcontrols button.disabled{ color: #d3d3d3; pointer-events: none; display: none !important; }
 .check-content.disabled {
 	pointer-events: none;
 	color: #d3d3d3;
 }
+
 
 
 
@@ -170,7 +205,8 @@ figure.capa.zoom-chaqueta{ top: 35.3%; }
 @media (max-width: 1360px) {
 	/*body{ background: red; }*/
 	/*modelo*/
-	.maniqui-content { left: 42%; width: 32%;}
+	/*.maniqui-content { left: 42%; width: 32%;}*/
+	.maniqui-content { left: 47%; width: 32%;}
 	.maniqui-inner { width: 58%;}
 	figure.capa.zoom-pantalon{ top: -22.3%; }
 	figure.capa.zoom-chaqueta{ top: 28%; }

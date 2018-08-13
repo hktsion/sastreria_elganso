@@ -80,10 +80,17 @@ var $ = jQuery.noConflict();
 				src: URL+ds[0]+'/'+ds[1]+'/'+ds[2]+'_'+ds[3]+'.png',
 				alt: ds[0]+'_'+ds[1]+'_'+ds[2]+'_'+ds[3]+'.png'
 			});
+
+			//console.log();
+			//console.log('SRC => '+URL+ds[0]+'/'+ds[1]+'/'+ds[2]+'_'+ds[3]+'.png');
+			//console.log('ALT => '+ds[0]+'_'+ds[1]+'_'+ds[2]+'_'+ds[3]+'.png');
+			//console.log();
+
 			$('[data-section='+datasection+'] div > p').text(TRANSLATOR[ds[2]+'_'+ds[3]][0] + ' - ' + TRANSLATOR[ds[2]+'_'+ds[3]][1]);
 			mostrarResumen.visible(datasection);
 		},
 		especial: (datasection,ds, URL)=>{
+			alert('especial');
 			let txt = ds[2];
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]).css({'display': 'flex'});
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]+' >figure > img').prop({
@@ -97,6 +104,7 @@ var $ = jQuery.noConflict();
 				txt = ds[3].slice(0, 2) + "/" + ds[3].slice(2);
 			}
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]+' >p').text(txt);
+			//$('[data-section='+datasection+'] h4').text(ds[2]);
 			mostrarResumen.visible(datasection);
 
 		},

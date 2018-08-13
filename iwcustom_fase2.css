@@ -1,0 +1,498 @@
+*{margin:0; padding: 0;}
+html, body{ width: 100%; }
+img {max-width:100%; vertical-align: middle}
+figure{ width: 100%;}
+
+/*HEREDADO DE LOCAL10*/
+.main .col-main .std{ margin: 0 !important; padding: 0 !important; }
+
+#iwmain label{font-size: 13px !important;font-family: Lato !important;color: #223041 !important;font-weight: 300 !important;}
+.negrita{font-weight: 900;}
+.centrado{text-align: center; width: 100%;}
+
+/*GENERALES*/
+#iwmain p{font-size: 13px;}
+#iwmain .iwctrls.resumencontroll .row-level-2{display: none;}
+#resumen-visible-mobile{display: none;}
+
+/*BOX SIZING*/
+#iwmain,#iwcontrols,
+#iwrow-level-1,
+div.row-level-2,
+.panel, .level-3 {box-sizing: border-box;}
+
+/*FLEX*/
+#iwrow-level-1,.level-3 .l3-container{ display: -webkit-box; display: -moz-box;display: -ms-flexbox;display: -webkit-flex; display: flex;}
+#iwrow-level-1{	-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+
+
+/* CONTENEDOR PRINCIPAL CON BACKGROUND*/
+#iwmain {width: 100%; height:630px; overflow: hidden; position: relative; background-image: url(http://local10.elganso.com/skin/frontend/elganso2016/default/images/iwsastreria/modelo/Fondo_1920x1080.jpg); background-size: 100% 100%;}
+
+/******************************** REVISADO ****************************************/
+
+/*MANIQUÍ*/
+.maniqui-wrapper { width: 100%; padding-bottom: 200%; position: absolute; top: 0; transition: all 900ms ease-in-out; left: 0px;}
+.maniqui-content { position: relative; /*max-width: 450px;*/ width: 24%; left: 60%;}
+.maniqui-inner { position: absolute; width: 100%; height: 100%; width: 78%;}
+.maniqui-wrapper-front,
+.maniqui-wrapper-back {transition: all 720ms ease-in-out;}
+#maniqui-wrapper-back{opacity: 0;} 
+#maniqui-wrapper-front{opacity: 1;}
+#figure-coderas{ display: none; }
+
+/*ILUSTRACIONES*/
+.maniqui-content .ilustracion{ width: 100%; opacity: 0; }
+.ilustracion.detalleinterior{ top: 100px; }
+
+/*CLAIM EL GANSO*/
+#iwmain #iwclaim{ width: 65%;height: 100%;position: absolute;top: 12%;left: 12%;}
+#iwmain #iwclaim figure, #iwmain #iwclaim h3{ width: 36%; }
+#iwmain #iwclaim h3{font-weight: bold;width: 36%;color: #5f89cd;}
+#iwmain #iwclaim h3 a{ color: aliceblue; transition: all 400ms ease-in-out; }
+#iwmain #iwclaim h3 a:hover{ color: #5f89cd; }
+
+/*CONTROLES*/
+#iwcontrols{position: absolute;bottom: 0px;width: 100%;z-index: 1000;}
+#iwcontrols .control-wrapper{width: 100%;}
+#iwcontrols button.disabled{ color: #d3d3d3; pointer-events: none; display: none !important; }
+.check-content.disabled { pointer-events: none;color: #d3d3d3;}
+.iwarrow-down{ transform: rotateY(180deg); }
+
+
+/*CAPAS*/
+figure.capa{position: absolute;top: 0px; transform: scale(1,1); transition:  top 500ms ease-in-out,transform 900ms cubic-bezier(0.6, 0.61, 0.4, 0.65)}
+figure.capa.zoom{ transform: scale(1.82,1.82); }
+figure.capa.zoom-pantalon{ top: -31.3%; }
+figure.capa.zoom-chaqueta{ top: 35.3%; }
+
+
+/*FILA NIVEL 1*/
+#iwrow-level-1{width: 100%;	flex-direction: row;flex-wrap: wrap;justify-content: flex-start;}
+#iwrow-level-1 .iwctrls{ width: 20%; align-self: flex-end; text-align: center; transition: all 400ms ease-in-out;}
+button.iwcontroll {
+	width: 95%;
+	margin: 0px auto;
+	font-weight: bold;
+	padding: 7px;
+	background: #ffffff;
+	border: 2px solid transparent;
+	border-radius: 20px 20px 0px 0px;
+	border-bottom: none;	
+	outline: none;	
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
+}
+
+/*
+button.iwcontroll::after {
+	content: '▲';	
+	right: 24px;
+	position: absolute;	
+	margin-left: 20px;
+	width: 10px;
+	color: #212121;
+	transition: all 321ms ease-in-out;
+	}
+	*/
+
+
+	/* NIVEL DOS -- collapsable*/
+	div.row-level-2 { width: 95%;margin: 0 auto;padding: 0px;display: block; background: #ffffff; display: none}
+	div.row-level-2.hide{display: none;}
+
+	.ui-accordion-header{padding: .7em .7em .7em .7em;margin: 0 0 0 0;background: #ffffff;color: #ffffff;border-radius: unset;	border: none;	outline:none;	border-bottom: 1px solid #ffffff;}
+	.ui-accordion .ui-accordion-header{ margin: 0px 0px 0px 0px; padding: 1.2em .5em 1.2em .7em;}
+	.accordion {background-color: #ffffff; font-weight: bold; color: #212121;cursor: pointer; padding: 3px 9px; width: 100%;border:none;text-align: left;outline: none;font-size: 15px;transition: 0.4s;}
+	button.accordion{ font-size: 12px; }
+	.active, .accordion:hover {background-color: #00295a; color: #ffffff;}
+	.accordion:after {content: '\002B';	color: #ffffff;font-weight: bold;	float: right;margin-left: 5px;}
+	.active:after {content: "\2212";	color: #212121;}
+	.panel {padding: 7px 0px;margin: 0px;background-color: #e8e8e8;max-height: 0;display: none;opacity: 0;position: relative;transition: max-height 0.2s ease-out;}
+
+	/*--------------------------------------------------------- checkboxs -- nivel 2*/
+	/*checks level 2*/
+	[class="check-container"]{margin: 5px 0px;}
+	/* --------------------------------- Checkbox*/
+	.check-content{ padding: 10px 0px; text-align: left;}
+	.check-content >p{ cursor: default; }
+	.panel>div>.check-content { padding: 2px 5px; position: relative;}
+	/*.panel>div>.check-content:nth-child(even) { background: #f3f3f3;}*/
+	.check-content label {font-size: 12px;}
+
+
+	/*RADIO NIVEL 2*/
+	.check-content > [type="radio"] {position: absolute; left: -9999px; -webkit-appearance: checkbox; -moz-appearance: checkbox;-ms-appearance: checkbox;}
+	.check-content>p{margin: 0 45px 0px !important;}
+	.check-content>p:after{
+		content: '';
+		position: absolute;
+		top:0;
+		left:5px;
+		width: 20px;
+		height: 20px;
+		background: #D1D3D4;
+	}
+
+	.check-content>p.checkeado:after{
+		content: '';
+		position: absolute;
+		top:0;
+		left:5px;
+		width: 20px;
+		height: 20px;
+		background-color: #4DCB6D;
+		content: '\2714';
+		text-align: center;
+	}
+
+
+	.check-content >[type="radio"] + label:after {content: '';position: absolute;}
+	.check-content >[type="radio"] + label {display: block;position: relative;	padding-left: 46px;cursor: pointer;}
+	.check-content >[type="radio"] + label:after {width: 20px; height: 20px;	top: 0; left: 0;}
+	/*OFF */
+	.check-content >[type="radio"]:not(:checked) + label:after {background-color: #D1D3D4;}
+	/*ON */
+	.check-content >[type="radio"]:checked + label {	color: green;}
+	.check-content >[type="radio"]:checked + label:after {background-color: #4DCB6D;content: '\2714';text-align: center;color: lighten(#4DCB6D, 20);}
+
+
+	/*RADIOS NIVEL 3*/
+	.box { position: relative; margin: 0.1em; width: 70px; height: 70px;}
+	.box input { position: absolute; left: -999em}
+	.check,label { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+	.check,label:hover {cursor: pointer; }
+	label { z-index: 10;}
+	.check { border: solid 2px #000; z-index: -1;}
+	.boxed{ border: 2px solid #00abff; }
+
+
+	/*NIVEL 3*/
+	.level-3{z-index:1001; position: absolute; left: 97%; top: -27px;     border: 2px solid #00295a; display: none; }
+	.level-3.level-3-up{top: -68px;}
+	[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3.level-3-up{top: -135px;}
+	[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3:before{ top: calc(90% - 10px);}
+	[data-val="pantalon_detalleinterior_vivointerior"] > .level-3.level-3-up{top: -110px;}
+	[data-val="pantalon_detalleinterior_vivointerior"] > .level-3:before{top: calc(77% - 10px);}
+	[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up{top: -83px;}
+	[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3:before{ top: calc(59% - 10px);}
+	[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3.level-3-up{top: -109px;}
+	[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3:before{ top: calc(78% - 10px);}
+	[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up{top: -85px;}
+	[data-val="pantalon_detalleinterior_pretina"] > .level-3:before{top: calc(59% - 10px);}
+	[data-val="chaqueta_forromangas_antecolor"] > .level-3{top: -37px;}
+	[data-val="chaqueta_forromangas_antecolor"] > .level-3:before{top: calc(52% - 10px) !important;}
+	[data-val="chaqueta_cinta_colgador"] > .level-3{top: -64px !important;}
+	[data-val="chaqueta_cinta_colgador"] > .level-3:before{top: calc(84% - 10px) !important;}
+
+	.level-3 .l3-container{ background: #ffffff; padding: 5px; }
+	.level-3.level-3-up.level-3-long .l3-container,
+	.level-3.level-3-up.level-3-medium .l3-container,
+	.level-3.level-3-up.level-3-medium-8 .l3-container,
+	.level-3.level-3-up.level-3-short .l3-container{  flex-wrap: wrap; }
+	.level-3.level-3-up.level-3-long .l3-container{ width: 593px;}
+	.level-3.level-3-up.level-3-medium .l3-container{width: 447px;}
+	.level-3.level-3-up.level-3-medium-8 .l3-container{width: 302px !important;}
+	.level-3.level-3-up.level-3-short .l3-container{width: 156px;}
+
+	/*triangulito*/
+	.level-3:before{position: absolute; content: ''; width: 0;height: 0;border-top: 10px solid transparent;border-right:10px solid #00295a;border-bottom: 10px solid transparent;top: calc(50% - 10px);left: -12px;}
+	.check-content:hover .level-3{ display: block; }
+
+
+	/*ILUSTRACIONES*/
+	/*ILUSTRACIONES*/
+	.ilustracion{width: 100%;position: absolute;top: 0; left: 250%;transition: all 1200ms ease-in-out;}
+	.ilustracion.forro{	position: relative;	top: 170px;	opacity: 0;}
+	.ilustracion.forro figure{	position: absolute;	top: 80px;}
+	.ilustracion #unasolapieza,.ilustracion #palaypie,.ilustracion #palapipingypie,.ilustracion #tipoforro{
+		position: relative; 
+		left: 0px; 
+		top:0px; 
+		opacity:1;
+		transition: all 600ms ease-in-out;
+	}
+
+	/*que el pantalón salía muy arriba*/
+	/*#pantalon{margin-top:140px;}*/
+
+	object.leyenda.leyenda_unasolapieza{
+		display: none;
+		width: 100%;
+		height: 200px;
+		position: absolute;
+		top: 50px;
+	}
+
+
+	/*LEYENDAS*/
+	#leyenda_unasolapieza{ display: none; }
+
+
+
+	/*SVG*/
+	.pala.color1, .delantero.color1, .fondo.color1, .forroint.color1, .pretina.color1 {fill:#9c9ba0}
+	.pie.color1, .costado.color1, .vivo.color1, .vivoint.color1, .pretina.color4 {fill:#c3c5ca}
+	.piping.color1, .espalda.color1, .hilo.color1, .pretina.color3, .forriping.color1 {fill:#ffffff}
+
+	.forriping.color2,
+	.color2 {fill:transparent;}
+
+	.hilo-ojales {fill:#dd0000}
+	.hilo-boton {fill:#dd0000}
+
+
+	@media (max-width: 1800px) {
+		body{ background: chocolate; }
+		.maniqui-content { left: 48%; width: 24%;}
+		/*resumen lateral*/
+		div#resumen-visible{left: 75%;}
+	}
+
+	@media (max-width: 1585px) {
+		body{ background: lightyellow; }
+		.maniqui-content{width: 26%;}
+	}
+
+	@media (max-width: 1460px) {
+		body{ background: yellow; }
+		.maniqui-content { left: 48%; width: 27%;}
+		.maniqui-inner { width: 80%;}
+		figure.capa.zoom-pantalon{ top: -28%; }
+		figure.capa.zoom-chaqueta{ top: 38%; }
+		div#resumen-visible{left: 75%}
+	}
+
+	@media (max-width: 1360px) {
+		body{ background: red; }
+		/*menu*/
+		#iwrow-level-1 .iwctrls{width: 27%;}
+		/*modelo*/
+		.maniqui-content { left: 47%; width: 30%;}
+		.maniqui-inner { width: 80%;}
+		figure.capa.zoom-pantalon{ top: -22.3%; }
+		figure.capa.zoom-chaqueta{ top: 28%; }
+		/*formulario*/
+		#iwform .content-iwform{left: 15%; width: 70%;}
+	}
+
+	@media (max-width: 1280px) {
+		body{ background: teal; }
+		/*modelo*/
+		.maniqui-content { left: 47%; width: 31%;}
+		.maniqui-inner { width: 80%;}
+		figure.capa.zoom-pantalon{ top: -22.3%; }
+		figure.capa.zoom-chaqueta{ top: 28%; }
+	}
+
+	@media (max-width: 1200px) {
+		body{ background: crimson; }
+		/*claim*/
+		#iwmain #iwclaim {width: 62%; top: 12%;left: 10%;}
+		/*modelo*/
+		.maniqui-content { left: 43%; width: 33.5%;}
+		figure.capa.zoom-pantalon {top: -28.3%;}
+		figure.capa.zoom-chaqueta {top: 43%;}
+	}
+	@media (max-width: 1072px) {
+		body{ background: lightcoral; }
+		/*claim*/
+		#iwmain #iwclaim {width: 72%; top: 12%;left: 5%;}
+		/*modelo*/
+		.maniqui-content { left: 47%; width: 36%;}
+		#iwrow-level-1 .iwctrls {width: 33.33%;}
+
+	}
+
+	@media (max-width: 1020px) {
+		body{ background: blue; }
+		/*claim*/
+		#iwmain #iwclaim {width: 62%; top: 12%;left: 5%;}
+		#iwcontrols{ width: 90%; margin: 0px 5%; }
+		/*modelo*/
+		.maniqui-content { left: 34%; width: 38%;}
+		#iwrow-level-1 .iwctrls {width: 33%;}
+		/*resumen visible*/
+		div#resumen-visible{ width: 214px!important;left: 64% !important;}
+		/*formulario*/
+		#iwform .content-iwform{left: 5% !important; width: 90% !important;}
+
+	}
+
+	@media (max-width: 879px) {
+		body{ background: lightsteelblue; }
+		/*modelo*/
+		.maniqui-content{ left: 28%; width: 56%;}
+		/*claim*/
+		#iwmain #iwclaim {width: 75%;top: 12%;left: 5%;}
+		/*resumen*/
+		div#resumen-visible{left: 63% !important;}
+		div#resumen-visible p{font-size: 10px !important;}
+		/*controles*/
+		#iwcontrols{ width: 100%; margin: 0px; }
+
+	}
+
+	@media screen and (max-width: 1024px) and (min-width: 769px){.std{ width: 100% !important }}
+	@media screen and (max-width: 740px) and (min-width: 481px){.std{ width: 100% !important }}
+	@media screen and (max-width: 375px){.std{ width: 100% !important }}
+
+
+
+	@media (max-width: 768px) {
+		body{ background: greenyellow; }
+
+	}
+
+
+	@media (max-width: 641px) {
+		body{ background: lightblue; }
+		/*main*/
+		#iwmain p{font-size: 12px;}
+		/*modelo*/
+		.maniqui-content{ left: 30%;   width: 62%; }
+		/*claim*/
+		#iwmain #iwclaim {width: 90%;top: 4%;left: 4%;}
+		#iwmain #iwclaim h3{font-size: 11px;}
+		/*resumen*/
+		div#resumen-visible .res-wrapper > div > h3{font-size: 13px;}
+		div#resumen-visible{width: 190px !important;}
+	}
+
+	@media (min-width: 360px) and (max-width: 640px) {
+		/*heredados*/
+		.std{ width: 100% !important }
+		/*main*/
+		#iwmain {width: 100%;height: 620px;}
+		#iwmain label{font-size: 12px !important;}
+		/*niveles*/
+		#iwmain .panel>div>.check-content{padding: 2px 5px;}
+		#iwmain .panel{padding: 5px 0px}
+		.iwrow-level-1{flex-direction: column;}
+		#iwrow-level-1 .iwctrls{width: 100%;}
+		button.iwcontroll {width: 100%;border-radius:0px 0px 0px 0px;}
+		div.row-level-2{width: 100%;}
+		.check-content label{font-size: 12px; margin:0px;}
+		button.accordion{font-size: 10px;}
+		button.iwcontroll{font-size:12px;}
+		.box {width: 45px;height: 45px;}
+		.level-3 {z-index: 1001;position: absolute;left: 5%;top: 28px;border: 2px solid #00295a;display: none;}
+		.level-3:before {
+			position: absolute;content: '';width: 0;height: 0;border-right: 10px solid transparent;border-bottom: 10px solid #00295a;
+			top: calc(-24px);left: 0%;border-left: 10px solid transparent;
+		}
+		#iwmain .level-3.level-3-up.level-3-long .l3-container {width: 200px;}
+		#iwmain .level-3.level-3-up.level-3-short .l3-container{width: 200px;}
+		[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up .l3container{width: 200px;}
+		.level-3.level-3-up {top: 32px;}
+		.level-3.level-3-up.level-3-medium .l3-container {width: 295px;}
+		.level-3.level-3-up.level-3-medium-8 .l3-container {width: 140px !important;}
+		[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up.level-3-medium-8 .l3-container{width: 200px !important}
+		[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up{top: -81px;}
+		[data-val="chaqueta_colorforro_delantero"] > .level-3.level-3-up{top: -209px;}
+
+		[data-val="chaqueta_colorforro_espalda"] > .level-3.level-3-up,
+		[data-val="chaqueta_colorforro_costado"] > .level-3.level-3-up,
+		[data-val="chaqueta_colorforro_piping"] > .level-3.level-3-up
+		{
+			top: -206px;
+		}
+
+		[data-val="chaqueta_forromangas_antecolor"] > .level-3.level-3-up,
+		#iwmain [data-val="chaqueta_forromangas_antecolor"] > .level-3
+		{
+			top: -61px;
+		}
+		#iwmain [data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up {
+			top: -112px;
+		}
+
+		#iwmain [data-val="pantalon_detalleexterior_colorhilo"] > .level-3.level-3-up{top:-120px;}
+
+		[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_colorforro_delantero"] > .level-3.level-3-up:before,
+		#iwmain [data-val="pantalon_detalleexterior_colorhilo"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_forromangas_antecolor"] > .level-3:before,
+		[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up:before
+		{content: '';position: absolute;width: 0;height: 0;}
+		[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up:before
+		{
+			border-right: 10px solid transparent; border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent; border-top: 10px solid #00295a; top: 78px; left: 0%; 
+		}
+
+
+		[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up,
+		[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3.level-3-up,
+		[data-val="pantalon_detalleinterior_vivointerior"] > .level-3.level-3-up,
+		[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3.level-3-up { top: -205px;}
+		[data-val="chaqueta_colorforro_delantero"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_colorforro_espalda"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_colorforro_costado"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_colorforro_piping"] > .level-3.level-3-up:before,
+		[data-val="chaqueta_forromangas_antecolor"] > .level-3:before
+		{
+			border-right: 10px solid transparent; border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent; border-top: 10px solid #00295a;
+			top: calc(102%); left: 90%; 
+		}
+		#iwmain [data-val="chaqueta_cinta_colgador"] > .level-3:before 
+		{
+			border-right: 10px solid transparent; border-top: 10px solid #00295a;
+			left: 90%; border-left: 10px solid transparent; border-bottom: 10px solid transparent; top: 107% !important;
+		}
+
+		[data-val="pantalon_detalleexterior_fondobolsillo"] > .level-3.level-3-up:before,
+		[data-val="pantalon_detalleexterior_vivobolsillo"] > .level-3.level-3-up:before,
+		[data-val="pantalon_detalleinterior_forrobolsillos"] > .level-3.level-3-up:before,
+		[data-val="pantalon_detalleinterior_vivointerior"] > .level-3.level-3-up:before
+		{
+			border-right: 10px solid transparent; border-left: 10px solid transparent;
+			border-bottom: 10px solid transparent; border-top: 10px solid #00295a; top: 203px;left: 90%;
+		}
+		#iwmain [data-val="chaqueta_forromangas_antecolor"] > .level-3:before{top: calc(122% - 10px) !important;}
+
+		#iwmain [data-val="pantalon_detalleexterior_colorhilo"] > .level-3.level-3-up:before
+		{
+			border-right: 10px solid transparent; border-bottom: 10px solid transparent;
+			top: 103%; left: 0%;border-left: 10px solid transparent;border-top: 10px solid #00295a;
+		}
+
+		[data-val="pantalon_detalleinterior_pretina"] > .level-3.level-3-up:before {
+			border-right: 10px solid transparent; border-bottom: 10px solid transparent;
+			top: 107% !important; left: 90%; border-left: 10px solid transparent; border-top: 10px solid #00295a;
+		}
+
+
+		/*modelo*/
+		.maniqui-content{left: 9%; width: 80%;top: 12px;}
+		/*zoom*/
+		#iwmain figure.capa.zoom-chaqueta {top: 4.3%;}
+		#iwmain figure.capa.zoom-pantalon {top: -35.3%;}
+		figure.capa.zoom {transform: scale(1.2,1.2);}
+		/*ilustraciones*/
+		#iwmain .ilustracion.detalleinterior{left: 0%; top: 0px;}
+		#iwmain .ilustracion.pantalon{left: 0%; top: -25px;}
+		#iwmain .ilustracion.bajocuello{left: 0%;}
+		#iwmain .ilustracion.forro { left: 0%;top: -50px;transform: scale(0.65,0.65);}
+		/*claim*/
+		#iwmain #iwclaim{ display: none; }
+		/*zoom*/
+		figure.capa.zoom-pantalon{ top: -35.3%; }
+		figure.capa.zoom-chaqueta{ top: 35.3%; }
+
+		/*resumen*/
+		/*#resumen-visible-mobile{display: block;}
+		#resumen-visible-mobile > .res-wrapper{display: flex;}
+		#resumen-visible-mobile > .res-wrapper h3{color:#212121; margin-top: 20px;}
+		#resumen-visible-mobile > .res-wrapper h4{font-size: 11px; margin: 0px !important; color:#212121;}
+		#resumen-visible-mobile > .res-wrapper figure{width: 35%; margin: 0 auto;}
+		#resumen-visible-mobile > .res-wrapper p{text-align: center; margin: 0;}
+		#resumen-visible-mobile > .res-wrapper .especial{display: flex;flex-direction: column;}
+		#resumen-visible-mobile > .res-wrapper .especial .opcion{display: flex;justify-content: center;}
+		
+		#resumen-visible-mobile > .res-wrapper .especial figure{margin:0px 10px !important; width: 24px; height: 24px;}*/
+		
+
+		    
+		    
+	}
