@@ -1,0 +1,108 @@
+ div#resumen-visible{
+ 	display: none;
+ 	width: 280px; 
+ 	opacity: 0.8;
+ 	box-sizing: border-box;
+ 	overflow: hidden; 
+ 	position: absolute; 
+ 	left:80%;
+ 	transition: all 400ms ease-in-out;
+ } 
+
+ #pestana-resumen-visible{ display: none; width: 100%;	text-align: center; }
+
+ div#resumen-visible .res-wrapper{ width: 100%; padding: 12px; display: flex; box-sizing: border-box;}
+ div#resumen-visible .res-wrapper > div{ margin: 1px; }
+ div#resumen-visible .res-wrapper > div > h3{ color: #212121; font-weight: bold; }
+ div.res-wrapper-chaqueta,
+ div.res-wrapper-pantalon{ width: 50%; box-sizing: border-box; }
+
+ /*resumen especial*/
+ .especial .opcion { display:none;	align-items: center;  }
+ .especial .opcion figure{ width: 25px; height: 25px; margin: 1px 7% }
+
+ /*las secciones que van dentro del wrapper y se van generrando de forma dinámica*/
+ div#resumen-visible .res-wrapper section{display: none; box-shadow: 5px 5px 7px rgba(0,0,0,0.3);background: #ffffff;width: 100%;box-sizing: border-box;margin: 1px 0px; }
+ div#resumen-visible figure{ text-align: center; }
+ div#resumen-visible h4{display: none;text-align: center;font-weight: 700;	margin-top: 0px;margin-bottom: 5px;	font-size: 10px;line-height: 12px; margin-top: 5px;}
+ div#resumen-visible p{ font-size: 12px;margin: 0px; line-height: 12px;}
+ [data-section="chaqueta_tejido"] p{ text-align: center; }
+ [data-section="chaqueta_tejido"],
+ [data-section="chaqueta_botones"],
+ [data-section="pantalon_tejido"]{display: none;}
+
+
+
+ /*h4 del resumen sin márgenes, gananando espacio*/
+ [data-section^="pantalon_"],
+ [data-section^="chaqueta_"],
+ #iwmain section [data-section="chaqueta_colorhilo"],
+ #iwmain section [data-section="chaqueta_colorcoderas"]
+ {margin: 0px 0px 5px !important;}
+
+
+ /*VERSIÓN MOBILE*/
+/*@media (min-width: 360px) and (max-width: 640px) { 
+ 	#iwmain div#resumen-visible {
+ 		overflow: auto;
+ 		display: block;
+ 		width: 100% !important;
+ 		left: 0% !important;
+ 		top: -200%;
+ 		z-index: 99999;
+ 		display: none;
+ 	}
+
+ 	div#resumen-visible.resumen-visible-mobile{}
+ 	}*/
+
+
+ 	@media (min-width: 360px) and (max-width: 640px) { 
+
+ 		/*#iwmain { height:630px; background-size: cover !important;}*/
+ 	#resumen-visible-mobile{ /*background: red;*/}
+ 	#resumen-visible{display: none !important; }
+
+ 	#resumen-visible-mobile .res-wrapper-chaqueta,
+ 	#resumen-visible-mobile .res-wrapper-pantalon{ margin-top: 10px; }
+
+ 	/*generales*/
+ 	#resumen-visible-mobile .res-wrapper-chaqueta p,
+ 	#resumen-visible-mobile .res-wrapper-pantalon p{font-size: 10px; margin: 0px; line-height: 13px;}
+ 	#resumen-visible-mobile .res-wrapper-chaqueta h4,
+ 	#resumen-visible-mobile .res-wrapper-pantalon h4{font-size: 10px; margin: 0px 0px 3px !important;}
+ 	/*encabezados h3 del resumen :: chaqueta y pantalón ; */
+ 	#resumen-visible-mobile .res-wrapper-chaqueta >h3,
+ 	#resumen-visible-mobile .res-wrapper-pantalon >h3{color: #212121; font-weight: bold;}
+
+ 	/*tejido*/
+ 	#resumen-visible-mobile .res-wrapper-chaqueta [data-section="chaqueta_tejido"] h4,
+ 	#resumen-visible-mobile .res-wrapper-pantalon [data-section="pantalon_tejido"] h4{margin: 0px 0px 0px !important;}
+
+ 	#resumen-visible-mobile .res-wrapper-chaqueta [data-section="chaqueta_tejido"] figure,
+ 	#resumen-visible-mobile .res-wrapper-pantalon [data-section="pantalon_tejido"] figure{ width: 35%; margin: 0 auto; }
+
+ 	/*opciones*/
+ 	#resumen-visible-mobile .res-wrapper-chaqueta .opcion,
+ 	#resumen-visible-mobile .res-wrapper-pantalon .opcion{ margin-left: 20%; }
+
+ 	#resumen-visible-mobile .res-wrapper{display: flex;}
+ 	#chaqueta_colorbajocuello [data-section^="chaqueta_"] h4,
+ 	#chaqueta_colorbajocuello [data-section^="pantalon_"] h4
+ 	{margin: 0px 0px 5px !important;}
+
+ 	/*formulario de contacto*/
+ 	#iwform form .form-flex{ flex-direction: column; }
+ 	#iwform form .form-flex .col1-2{ width: 100%;}
+ 	#iwform input[type="submit"], input#enviar-sastreria{width: 100% !important;}
+
+
+
+
+
+
+ }
+
+
+
+

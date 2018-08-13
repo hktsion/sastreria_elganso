@@ -90,7 +90,7 @@ var $ = jQuery.noConflict();
 			mostrarResumen.visible(datasection);
 		},
 		especial: (datasection,ds, URL)=>{
-			alert('especial');
+			//alert('especial');
 			let txt = ds[2];
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]).css({'display': 'flex'});
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]+' >figure > img').prop({
@@ -104,6 +104,10 @@ var $ = jQuery.noConflict();
 				txt = ds[3].slice(0, 2) + "/" + ds[3].slice(2);
 			}
 			$('[data-section='+datasection+'] > div.opcion-'+ds[2]+' >p').text(txt);
+
+			console.log( ds );
+			$('[data-section='+datasection+'] > div >h4').text(TRANSLATOR[ds[1]].toUpperCase());
+			
 			//$('[data-section='+datasection+'] h4').text(ds[2]);
 			mostrarResumen.visible(datasection);
 
@@ -118,9 +122,6 @@ var $ = jQuery.noConflict();
 
 	SUMMARY.evalSection = function(ds){
 		//el tamaño del DS hace que metamos una imagen o sólo texto;
-		//console.log('-- evalSection --');
-		//console.log($('*[data-section='+ds+']').length);
-		//console.log($('*[data-section='+ds+']'));
 		return  $('*[data-section='+ds+']').length;
 	}
 

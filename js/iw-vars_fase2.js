@@ -4,7 +4,7 @@ var TAILOR = {};
 var SUMMARY = {};
 var MOVEMENTS = {};
 var CONTACTO = {};
-let chaqueta = {
+var chaqueta = {
 	'tejido': [],
 	'bajocuello': '',
 	'colorbajocuello': {},
@@ -22,7 +22,7 @@ let chaqueta = {
 	'etiqueta': ''
 }
 
-let pantalon = {
+var pantalon = {
 	'tejido': [],
 	'patron': '',
 	'detalleexterior': {},
@@ -30,9 +30,9 @@ let pantalon = {
 	'botonespantalon': [],
 	'hilopantalon': []
 };
-let TAILORSHOP = { 'chaqueta' : chaqueta,'pantalon' : pantalon}
+var TAILORSHOP = { 'chaqueta' : chaqueta,'pantalon' : pantalon}
 
-let COLORS = {
+var COLORS = {
 	'chaqueta_tejido': {
 		'liso'  			: ['marino', 'negro', 'grism', 'grisc'],
 		'espiga'			: ['marino', 'gris'],
@@ -60,9 +60,15 @@ let COLORS = {
 	},
 }
 
-
-
-let TRANSLATOR = {
+var TRANSLATOR = {
+	'colorbajocuello': 'Color Bajocuello',
+	'colorhilo': 'Color hilo',
+	'colorcoderas': 'Color coderas',
+	'colorforro': 'Color forro',
+	'forromangas': 'Forro mangas',
+	'cinta': 'Cinta',
+	'detalleexterior' :'Detalle exterior',
+	'detalleinterior': 'Detalle interior',
 	'liso_azulguabello':['Liso', 'Azul Guabello 2472C/100/5'],
 	'liso_azulmarzotto':['Liso', 'Azul Marzotto 83268/0010/0040'],
 	'liso_grismarzotto':['Liso', 'Gris Marzotto 83268/0010/0042'],
@@ -117,31 +123,31 @@ let TRANSLATOR = {
 	'pala_827':['Pala', '#827']
 }
 
-let input_hide_colorbajocuello= ['chaqueta_colorbajocuello_pala', 'chaqueta_colorbajocuello_piping', 'chaqueta_colorbajocuello_pie'];
-let input_show_colorbajocuello = {
+var input_hide_colorbajocuello= ['chaqueta_colorbajocuello_pala', 'chaqueta_colorbajocuello_piping', 'chaqueta_colorbajocuello_pie'];
+var input_show_colorbajocuello = {
 	'unasolapieza'   : ['chaqueta_colorbajocuello_pala'],
 	'palaypie'		 : ['chaqueta_colorbajocuello_pala', 'chaqueta_colorbajocuello_pie'],
 	'palapipingypie' : ['chaqueta_colorbajocuello_pala', 'chaqueta_colorbajocuello_piping', 'chaqueta_colorbajocuello_pie']
 }
-let trad_delete_colorbajocuello = {
+var trad_delete_colorbajocuello = {
 	'unasolapieza'   : ['palaypie', 'palapipingypie' ],
 	'palaypie'		 : ['unasolapieza', 'palapipingypie' ],
 	'palapipingypie' : ['unasolapieza', 'palaypie' ]
 }
 
-let input_hide_colorforro = ['chaqueta_colorforro_delantero', 'chaqueta_colorforro_espalda', 'chaqueta_colorforro_costado', 'chaqueta_colorforro_piping'];
-let input_show_colorforro = {
+var input_hide_colorforro = ['chaqueta_colorforro_delantero', 'chaqueta_colorforro_espalda', 'chaqueta_colorforro_costado', 'chaqueta_colorforro_piping'];
+var input_show_colorforro = {
 	'con_forro'   : ['chaqueta_colorforro_delantero', 'chaqueta_colorforro_espalda',  'chaqueta_colorforro_costado'],
 	'sin_forro'	  : ['chaqueta_colorforro_delantero', 'chaqueta_colorforro_espalda',  'chaqueta_colorforro_costado'],
 	'medio_forro' : ['chaqueta_colorforro_delantero', 'chaqueta_colorforro_espalda',  'chaqueta_colorforro_costado', 'chaqueta_colorforro_piping']
 }
-let trad_delete_colorforro = {
+var trad_delete_colorforro = {
 	'con_forro'   : ['sin_forro', 'medio_forro' ],
 	'sin_forro'	  : ['con_forro', 'medio_forro' ],
 	'medio_forro' : ['con_forro', 'sin_forro' ]
 } 
 
-let SVGCOLORS_BAJOCUELLO = {
+var SVGCOLORS_BAJOCUELLO = {
 	'chaqueta_colorbajocuello_pala_827' : {'bg':['.pala.color1', '#00155c'],'topos':['.pala.color2','transparent']},
 	'chaqueta_colorbajocuello_pala_503' : {'bg':['.pala.color1', '#d00054'],'topos':['.pala.color2','transparent']},
 	'chaqueta_colorbajocuello_pala_909' : {'bg':['.pala.color1', '#00662f'],'topos':['.pala.color2','transparent']},
@@ -192,7 +198,7 @@ let SVGCOLORS_BAJOCUELLO = {
 	'chaqueta_colorbajocuello_pie_verdetopomarino': {'bg' : ['.pie.color1', '#01642d'],'topos' : ['.pie.color2', '#00135c']	}
 }
 
-let SVGCOLORS_FORRO = {
+var SVGCOLORS_FORRO = {
 	'chaqueta_colorforro_delantero_827' : {'bg':['.delantero.color1', '#00155c'],'topos':['.delantero.color2','transparent']},
 	'chaqueta_colorforro_delantero_503' : {'bg':['.delantero.color1', '#d00054'],'topos':['.delantero.color2','transparent']},
 	'chaqueta_colorforro_delantero_909' : {'bg':['.delantero.color1', '#00662f'],'topos':['.delantero.color2','transparent']},
@@ -263,7 +269,7 @@ let SVGCOLORS_FORRO = {
 }
 
 
-let SVGCOLORS_PANTALON_EXTERIOR = {
+var SVGCOLORS_PANTALON_EXTERIOR = {
 	'pantalon_detalleexterior_colorhilo_827' : {'bg':['.hilo.color1', '#00155c'],'topos':['.hilo.color2','']},
 	'pantalon_detalleexterior_colorhilo_503' : {'bg':['.hilo.color1', '#d00054'],'topos':['.hilo.color2','']},
 	'pantalon_detalleexterior_colorhilo_909' : {'bg':['.hilo.color1', '#00662f'],'topos':['.hilo.color2','']},
@@ -316,7 +322,7 @@ let SVGCOLORS_PANTALON_EXTERIOR = {
 }
 
 
-let SVGCOLORS_DETALLEINTERIOR = {
+var SVGCOLORS_DETALLEINTERIOR = {
 	'pantalon_detalleinterior_vivointerior_827' : {'bg':['.vivoint.color1', '#00155c'],'topos':['.vivoint.color2','transparent']},
 	'pantalon_detalleinterior_vivointerior_503' : {'bg':['.vivoint.color1', '#d00054'],'topos':['.vivoint.color2','transparent']},
 	'pantalon_detalleinterior_vivointerior_909' : {'bg':['.vivoint.color1', '#00662f'],'topos':['.vivoint.color2','transparent']},

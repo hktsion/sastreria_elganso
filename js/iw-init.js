@@ -3,22 +3,13 @@ var $ = jQuery.noConflict();
 
 (function(ACCORDION, $){
 
+		/*Hace que la escena se adapte al ancho y largo de la pantalla del usuario*/
+		function setScene(){
+			$('#iwmain').width(screen.width);
+			$('#iwmain').height(0.68*screen.height);
+		}
 
-	function consolas(){
-		console.log(`%c 
-			-.. . ... .- .-. .-. --- .-.. .-.. .- -.. ---\n                                     
-			.--. --- .-.    .. -. - .-. --- .-- --- .-. -.- ...\n                               
-			.... - - .--. ---... -..-. -..-. .. -. - .-. --- .-- --- .-. -.- ... .-.-.- . ...`,
-			"color:#000000; background:white; font-family: monospace");
-	}
-
-	/*Hace que la escena se adapte al ancho y largo de la pantalla del usuario*/
-	function setScene(){
-		$('#iwmain').width(screen.width);
-		$('#iwmain').height(0.68*screen.height);
-	}
-
-	function setNivel_2(){
+		function setNivel_2(){
 			//ACORDEÓN
 			let acc = document.getElementsByClassName("accordion");
 
@@ -69,43 +60,9 @@ var $ = jQuery.noConflict();
 			}
 		}
 
-	// 	function detectmob() { 
-	// 		if( navigator.userAgent.match(/Android/i)
-	// 			|| navigator.userAgent.match(/webOS/i)
-	// 			|| navigator.userAgent.match(/iPhone/i)
-	// 			|| navigator.userAgent.match(/iPad/i)
-	// 			|| navigator.userAgent.match(/iPod/i)
-	// 			|| navigator.userAgent.match(/BlackBerry/i)
-	// 			|| navigator.userAgent.match(/Windows Phone/i)
-	// 			){
-	// 			return true;
-	// 	}
-	// 	else {
-	// 		return false;
-	// 	}
-	// }
-
-	function isMobile() {
-		if(window.innerWidth < 800) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	function setNivelesMobile(){
-		$('#resumen-visible-mobile section').css({'display': 'none'});
-		$('#resumen-visible-mobile .opcion').css({'display': 'none'});
 
 
-		console.log('********** resumen visible para mobile ****************');
-		console.log($('#resumen-visible-mobile section'));
-		console.log('********** resumen visible para mobile ****************');
-	}
-	
-
-
-	function setNivel_1(){
+		function setNivel_1(){
 
 			//iwcontroll <=> button sube pestañas;
 			$('.iwcontroll').click(function(event) {
@@ -143,46 +100,18 @@ var $ = jQuery.noConflict();
 						// 	icon: "success",
 						// 	button: "Lo haré",
 						// });
-
-						// if(!isMobile()){
-						// 	
-						// 	
-						// 	
-						// 	
-						// 	// TAILOR.setSummary('iw-init.js');
-						// }
 						$('.capa').removeClass('zoom zoom-pantalon zoom-chaqueta'); 
 						$('#maniqui-wrapper-front').animate({'opacity': 1, 'left': -25+'%'},'fast');
 						$('#maniqui-wrapper-back').animate({'opacity': 1, 'left': +25+'%'},'fast');
 						$('div#resumen-visible').css({'display': 'block'});
+						// TAILOR.setSummary('iw-init.js');
 						break;
 
 						default: break;
 					}
 
-
-
-					//SUBIR NIVEL DE RESUMEN;
-					/*if(event.target.dataset.value == 'resumen' && !isMobile()){
-						$(this).parent('.iwctrls').find('.row-level-2').slideDown("fast");
-						$('#iwmain .iwctrls.resumencontroll .row-level-2').css({'display': 'none'});
-						$(this).removeAttr('data-up');
-						return;
-						//#iwmain .iwctrls.resumencontroll .row-level-2
-					}
-
-					//es resumen y móvil => sube el nivel
-					if(event.target.dataset.value == 'resumen' && isMobile()){
-						$(this).parent('.iwctrls').find('.row-level-2').slideDown("fast");
-					}
-					//subo el nivel
-					if(event.target.dataset.value != 'resumen'){
-						$(this).parent('.iwctrls').find('.row-level-2').slideDown("fast");
-					}*/
-
+					//SUBO MI NIVEL
 					$(this).parent('.iwctrls').find('.row-level-2').slideDown("fast");
-					$('#iwmain .iwctrls.resumencontroll .row-level-2').css({'display': 'none'});
-					$(this).removeAttr('data-up');
 
 					//BAJO EL RESTO DE NIVELES
 					$(this).parent('.iwctrls').siblings('.iwctrls').find('.row-level-2').slideUp("fast");
@@ -206,6 +135,12 @@ var $ = jQuery.noConflict();
 				}
 			});
 		}
+		
+
+		function setNivel_3(){
+			return;
+		}
+
 
 		
 		ACCORDION.init = function(){
@@ -213,10 +148,7 @@ var $ = jQuery.noConflict();
 			jQuery(document).ready(function($) {
 
 				//Cambia la resolución al 68% del height del dispositivo;
-				//setScene();
-
-				//Saca detalle por consola
-				consolas();
+				setScene();
 
 				//Activa el NIVEL1 de la satrería (slideUp/slideDown)
 				setNivel_1();
@@ -224,14 +156,15 @@ var $ = jQuery.noConflict();
 				//Activa el NIVEL2 de la sastrería (accordion)
 				setNivel_2();
 
-				setNivelesMobile();
-				
-				// swal({
-				// 	title: "¡Recuerda ser coherente con los colores de tu traje!",
-				// 	text: "No todos los colores quedan bien juntos... puedes dejarte asesorar por nuestros sastres en tu visita a tienda",
-				// 	icon: "success",
-				// 	button: "Lo haré",
-				// });
+				//Activa el NIVEL3 de la sastrería (sacar opciones de cada selección)
+				setNivel_3();
+
+				swal({
+					title: "¡Recuerda ser coherente con los colores de tu traje!",
+					text: "No todos los colores quedan bien juntos... puedes dejarte asesorar por nuestros sastres en tu visita a tienda",
+					icon: "success",
+					button: "Lo haré",
+				});
 
 			});
 			
